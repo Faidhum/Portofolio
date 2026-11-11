@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGASI (sticky + dropdown) ===== -->
+  <nav>
+    <span class="logo">Portofolio</span>
+    <ul class="menu">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li class="dropdown">
+        <a href="#keahlian">Keahlian ▾</a>
+        <ul class="submenu">
+          <li><a href="#keahlian">Skill Teknis</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+        </ul>
+      </li>
+      <li><a href="#pendidikan">Pendidikan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO: teks kiri, foto kanan ===== -->
+  <header id="beranda">
+    <div class="hero">
+      <div class="hero-teks">
+        <p class="sapaan">Selamat datang di web saya</p>
+        <h1>Faidhum Musahharoh</h1>
+        <h3>Mahasiswa Teknik Informatika</h3>
+        <p>Politeknik Negeri Jember. Suka belajar membuat website yang rapi dan nyaman dipakai.</p>
+        <a href="#kontak" class="btn">Hubungi Saya</a>
+        <a href="#proyek" class="btn btn-outline">Lihat Proyek</a>
+      </div>
+
+      <!-- Ganti foto.jpg dengan fotomu -->
+      <img class="foto" src="foto.jpg" alt="Foto profil"
+           onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23dbe4f5%22/%3E%3Ccircle cx=%22100%22 cy=%2278%22 r=%2240%22 fill=%22%231e3a7a%22/%3E%3Cpath d=%22M20 200c0-50 36-80 80-80s80 30 80 80z%22 fill=%22%231e3a7a%22/%3E%3C/svg%3E'">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== TENTANG + STATISTIK ===== -->
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya mahasiswa Teknik Informatika yang sedang mendalami pengembangan web.
+        Saya merupakan alumni dari MAN 2 Probolinggo yang sekarang sedang menempuh pembelajaran di politeknik negeri jember.
+      </p>
+      <div class="statistik">
+        <div class="stat"><strong>5+</strong><span>Proyek</span></div>
+        <div class="stat"><strong>3</strong><span>Bahasa Web</span></div>
+        <div class="stat"><strong>100%</strong><span>Semangat</span></div>
+      </div>
+    </section>
+
+    <!-- ===== KEAHLIAN: progress bar ===== -->
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+
+      <div class="skill">
+        <label>HTML</label>
+        <div class="bar"><div class="isi" style="width: 50%;">50%</div></div>
+      </div>
+      <div class="skill">
+        <label>CSS</label>
+        <div class="bar"><div class="isi" style="width: 50%;">50%</div></div>
+      </div>
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="bar"><div class="isi" style="width: 50%;">50%</div></div>
+      </div>
+    </section>
+
+    <!-- ===== PROYEK: grid kartu ===== -->
+    <section id="proyek">
+      <h2>Proyek</h2>
+      <div class="grid">
+        <article class="kartu">
+          <div class="kartu-atas">☕</div>
+          <h4>Coffee Corner Café</h4>
+          <p>Website café dengan header, menu, dan acara memakai CSS eksternal.</p>
+          <span class="tag">HTML</span> <span class="tag">CSS</span>
+        </article>
+
+        <article class="kartu">
+          <div class="kartu-atas">💼</div>
+          <h4>Portofolio Pribadi</h4>
+          <p>Halaman profil responsif bernuansa dongker dan putih.</p>
+          <span class="tag">Flexbox</span> <span class="tag">Grid</span>
+        </article>
+
+        <article class="kartu">
+          <div class="kartu-atas">📋</div>
+          <h4>Website Sederhana</h4>
+          <p>Latihan dasar header, section, dan footer dengan CSS.</p>
+          <span class="tag">Selector</span> <span class="tag">Box Model</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PENDIDIKAN: timeline + tabel ===== -->
+    <section id="pendidikan">
+      <h2>Pendidikan</h2>
+
+      <div class="timeline">
+        <div class="item">
+          <h4>2025 – sekarang</h4>
+          <p>D4 Teknik Informatika, Politeknik Negeri Jember</p>
+        </div>
+        <div class="item">
+          <h4>2022 – 2025</h4>
+          <p>MAN 2 Probolinggo</p>
+        </div>
+      </div>
+
+      <h3>Mata Kuliah yang Diambil</h3>
+      <table>
+        <tr><th>No</th><th>Mata Kuliah</th><th>Nilai</th></tr>
+        <tr><td>1</td><td>Pemrograman Dasar</td><td>A</td></tr>
+        <tr><td>2</td><td>Workshop Desain Aplikasi</td><td>A-</td></tr>
+        <tr><td>3</td><td>Algoritma</td><td>B+</td></tr>
+      </table>
+    </section>
+
+    <!-- ===== KONTAK: form ===== -->
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <form>
+        <input type="text" placeholder="Nama">
+        <input type="text" placeholder="Alamat">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Pesan"></textarea>
+        <button type="button" class="btn">Kirim Pesan</button>
+      </form>
+
+      <address>
+        <strong>Alamat:</strong><br>
+        Probolinggo, Jawa Timur<br>
+        Email: <a href="mailto:E41260419@student.polije.ac.id">E41260419@student.polije.ac.id</a>
+      </address>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Faidhum Musahharoh. Dibuat dengan HTML dan CSS.</p>
+  </footer>
+
+</body>
+</html>
