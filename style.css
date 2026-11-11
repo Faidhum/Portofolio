@@ -1,0 +1,244 @@
+/* ===== Variabel warna ===== */
+:root {
+  --dongker: #0a1f44;
+  --biru: #2f5fb3;
+  --muda: #e8eef9;
+  --putih: #ffffff;
+  --teks: #1f2a44;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f5fb;
+  color: var(--teks);
+  line-height: 1.6;
+}
+
+::selection { background: var(--biru); color: var(--putih); }
+
+/* ===== Navigasi + dropdown ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--putih);
+  padding: 0 30px;
+  border-bottom: 3px solid var(--biru);
+}
+
+.logo { font-weight: bold; color: var(--dongker); font-size: 20px; }
+
+.menu { list-style: none; margin: 0; padding: 0; display: flex; }
+.menu a {
+  display: block;
+  padding: 16px 18px;
+  color: var(--dongker);
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu a:hover { background: var(--biru); color: var(--putih); }
+
+.dropdown { position: relative; }
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--putih);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.dropdown:hover .submenu { display: block; }
+
+/* ===== Hero ===== */
+header {
+  background: linear-gradient(135deg, var(--dongker), var(--biru));
+  color: var(--putih);
+  padding: 60px 20px;
+}
+
+.hero {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-teks { max-width: 520px; }
+.sapaan { margin: 0; opacity: 0.85; }
+.hero h1 { margin: 0; font-size: 46px; letter-spacing: 1px; }
+.hero h3 { margin: 5px 0 12px; font-weight: normal; font-style: italic; }
+
+.foto {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--putih);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+/* ===== Tombol ===== */
+.btn {
+  display: inline-block;
+  background: var(--putih);
+  color: var(--dongker);
+  padding: 10px 22px;
+  border: 2px solid var(--putih);
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
+.btn-outline { background: transparent; color: var(--putih); }
+.btn-outline:hover { background: var(--putih); color: var(--dongker); }
+
+/* ===== Konten ===== */
+main { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+section {
+  background: var(--putih);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: var(--dongker);
+  border-bottom: 2px solid var(--biru);
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+a { color: var(--dongker); }
+
+/* ===== Statistik (grid 3 kolom) ===== */
+.statistik {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+.stat {
+  background: var(--muda);
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+.stat strong { display: block; font-size: 30px; color: var(--dongker); }
+
+/* ===== Progress bar skill ===== */
+.skill { margin-bottom: 14px; }
+.skill label { font-weight: bold; }
+.bar { background: var(--muda); border-radius: 20px; overflow: hidden; }
+.isi {
+  background: linear-gradient(90deg, var(--biru), var(--dongker));
+  color: var(--putih);
+  text-align: right;
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 20px;
+}
+
+/* ===== Kartu proyek ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.kartu {
+  border: 1px solid #c9d6ee;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  text-align: center;
+  transition: 0.25s;
+}
+.kartu:hover { transform: translateY(-6px); box-shadow: 0 10px 18px rgba(10,31,68,0.2); }
+.kartu-atas { background: var(--muda); font-size: 44px; padding: 20px; }
+.kartu h4 { margin: 12px 0 4px; color: var(--dongker); }
+.kartu p  { margin: 0 12px 10px; font-size: 14px; }
+.tag {
+  display: inline-block;
+  background: var(--biru);
+  color: var(--putih);
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+/* ===== Timeline ===== */
+.timeline { border-left: 3px solid var(--biru); margin: 15px 0 25px 10px; padding-left: 20px; }
+.item { position: relative; margin-bottom: 18px; }
+.item::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  background: var(--dongker);
+  border: 2px solid var(--putih);
+  border-radius: 50%;
+}
+.item h4 { margin: 0; color: var(--dongker); }
+.item p  { margin: 0; }
+
+/* ===== Tabel ===== */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; text-align: left; }
+th { background: var(--dongker); color: var(--putih); }
+tr:nth-child(even) { background: var(--muda); }
+tr:hover td { background: #d5e0f4; }
+
+/* ===== Form ===== */
+form { display: flex; flex-direction: column; gap: 12px; }
+input, textarea {
+  padding: 10px 12px;
+  border: 2px solid #c9d6ee;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--biru); }
+form .btn { background: var(--dongker); color: var(--putih); border-color: var(--dongker); align-self: flex-start; }
+
+address {
+  font-style: normal;
+  margin-top: 20px;
+  background: var(--muda);
+  border-left: 4px solid var(--dongker);
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--dongker);
+  color: var(--muda);
+  text-align: center;
+  padding: 18px;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 700px) {
+  nav { flex-direction: column; padding: 10px; }
+  .menu { flex-wrap: wrap; justify-content: center; }
+  .hero { flex-direction: column-reverse; text-align: center; }
+  .statistik { grid-template-columns: 1fr; }
+}
